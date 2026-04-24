@@ -1,6 +1,5 @@
 import Foundation
 
-// Solution Template
 func mergeAlternately(_ word1: String, _ word2: String) -> String {
     let array1 = Array(word1)
     let array2 = Array(word2)
