@@ -2,7 +2,7 @@
 # Longest Substring Without Repeating Characters (Swift)
 
 ## Problem Description
-Given a string `s`, find the length of the longest substring without repeating characters. The substring must be contiguous, and characters cannot repeat within it.[web:61][page:1]
+Given a string `s`, find the length of the longest substring without repeating characters. The substring must be contiguous, and characters cannot repeat within it.
 
 Examples:
 - Input: `"abcabcbb"` → Output: `3` (substring `"abc"`)
@@ -10,13 +10,13 @@ Examples:
 - Input: `"pwwkew"` → Output: `3` (substring `"wke"`)[web:67][page:1]
 
 ## How it Works (Step-by-Step)
-1. Initialize two pointers `left = 0` and `right` that will move over the string, plus an integer `maxLen = 0` to track the best window length.[web:61][page:1]
-2. Maintain a dictionary `charIndex` where keys are characters and values are their latest indices in the string.[web:61][page:1]
-3. Iterate over the string using `enumerated()` so you get both `right` (index) and `char` (character) at each step.[web:61][page:1]
-4. For each character, check if it already exists in `charIndex` **and** its stored index is within the current window (`lastIndex >= left`). If so, move `left` to `lastIndex + 1` to shrink the window from the left and remove the duplicate from the window.[web:61][page:1]
-5. Update the dictionary entry for the current character: `charIndex[char] = right`.[web:61][page:1]
-6. Compute the current window length as `right - left + 1` and update `maxLen` if this window is longer than the previous best.[web:61][page:1]
-7. After the loop finishes, `maxLen` holds the length of the longest substring without repeating characters.[web:61][page:1]
+1. Initialize two pointers `left = 0` and `right` that will move over the string, plus an integer `maxLen = 0` to track the best window length.
+2. Maintain a dictionary `charIndex` where keys are characters and values are their latest indices in the string.
+3. Iterate over the string using `enumerated()` so you get both `right` (index) and `char` (character) at each step.
+4. For each character, check if it already exists in `charIndex` **and** its stored index is within the current window (`lastIndex >= left`). If so, move `left` to `lastIndex + 1` to shrink the window from the left and remove the duplicate from the window.
+5. Update the dictionary entry for the current character: `charIndex[char] = right`.
+6. Compute the current window length as `right - left + 1` and update `maxLen` if this window is longer than the previous best.
+7. After the loop finishes, `maxLen` holds the length of the longest substring without repeating characters.
 
 ## Swift Implementation
 ```swift
@@ -38,7 +38,6 @@ class Solution {
     }
 }
 ```
-[web:61][page:1]
 
 ## Example Walkthrough
 ### Example 1
